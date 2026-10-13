@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Smart Design · Blog personal
+   Archivo: css/styles.css
+   Se carga DESPUÉS de Bootstrap para poder personalizar sus estilos.
+
+   BUENAS PRÁCTICAS aplicadas en este archivo:
+   [BP-CSS-1] Variables CSS (custom properties) para colores, fuentes y espacios.
+   [BP-CSS-2] Mobile-first: los estilos base son para móvil; @media amplía.
+   [BP-CSS-3] Nombres de clase claros con prefijo "sd-" (Smart Design) para
+              no chocar con las clases de Bootstrap.
+   [BP-CSS-4] Foco visible (:focus-visible) para navegación con teclado.
+   [BP-CSS-5] Respeta prefers-reduced-motion (menos animación si el usuario lo pide).
+   [BP-CSS-6] Contraste de color AA (texto oscuro sobre fondo claro).
+   ========================================================================== */
+
+/* ---------- 1. Variables (identidad de marca tomada del logo) ---------- */
+:root {
+  --sd-blue: #0b5be6;        /* azul del logo */
+  --sd-ink: #12233d;         /* azul marino del logo (texto y fondos oscuros) */
+  --sd-paper: #f2f3f6;       /* fondo general, gris muy claro como el del logo */
+  --sd-white: #ffffff;
+  --sd-marker: #ffe14d;      /* amarillo "marcador" para resaltar */
+  --sd-muted: #4f5f78;       /* texto secundario (contraste 6:1 sobre blanco) */
+  --sd-line: #d3d9e3;        /* bordes suaves */
+
+  --sd-font-title: "Sora", "Segoe UI", Arial, sans-serif;
+  --sd-font-body: "Newsreader", Georgia, "Times New Roman", serif;
+
+  --sd-cut: 22px;            /* tamaño del corte diagonal (viene del hexágono del logo) */
+}
+
+/* ---------- 2. Base ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sd-font-body);
+  font-size: 1.125rem;       /* 18px: cómodo para leer en serif */
+  line-height: 1.65;
+  color: var(--sd-ink);
+  background: var(--sd-paper);
+}
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .sd-title {
+  font-family: var(--sd-font-title);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--sd-ink);
+}
+
+h1 { font-size: clamp(2rem, 5vw + 0.5rem, 3.4rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.1rem); }
+h3 { font-size: 1.3rem; }
+
+a { color: var(--sd-blue); text-underline-offset: 3px; }
+a:hover { color: var(--sd-ink); }
+
+p { max-width: 68ch; }   /* líneas de máximo ~68 caracteres: más fáciles de leer */
+
+img { max-width: 100%; height: auto; }
+
+/* Foco visible para teclado */
+:focus-visible {
+  outline: 3px solid var(--sd-blue);
+  outline-offset: 3px;
+}
+
+/* Enlace "saltar al contenido" (accesibilidad) */
+.sd-skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 2000;
+  background: var(--sd-ink);
+  color: var(--sd-white);
+  padding: 0.6rem 1rem;
+  font-family: var(--sd-font-title);
+}
+.sd-skip:focus { top: 1rem; color: var(--sd-white); }
+
+/* ---------- 3. Elementos de marca ---------- */
+
+/* Corte diagonal en esquinas opuestas: firma visual del hexágono del logo */
+.sd-cut {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--sd-cut)) 0,
+    100% var(--sd-cut),
+    100% 100%,
+    var(--sd-cut) 100%,
+    0 calc(100% - var(--sd-cut))
+  );
+}
+
+/* Cuadritos "píxel" del logo, hechos solo con CSS (decorativo) */
+.sd-pixels {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 2.3rem 2px;
+  background: var(--sd-blue);
+  box-shadow: 18px 18px 0 var(--sd-blue), 0 36px 0 var(--sd-blue), 0 36px 0 var(--sd-blue);
+}
+
+/* Botones */
+.sd-btn {
+  display: inline-block;
+  font-family: var(--sd-font-title);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid var(--sd-blue);
+  background: var(--sd-blue);
+  color: var(--sd-white);
+  text-decoration: none;
+  border-radius: 0;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.sd-btn:hover { background: var(--sd-ink); border-color: var(--sd-ink); color: var(--sd-white); }
+.sd-btn--ghost { background: transparent; color: var(--sd-ink); border-color: var(--sd-ink); }
+.sd-btn--ghost:hover { background: var(--sd-ink); color: var(--sd-white); }
+.sd-btn--marker { background: var(--sd-marker); border-color: var(--sd-marker); color: var(--sd-ink); }
+.sd-btn--marker:hover { background: var(--sd-white); border-color: var(--sd-white); color: var(--sd-ink); }
+
+/* Etiqueta de categoría */
+.sd-tag {
+  display: inline-block;
+  font-family: var(--sd-font-title);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.15rem 0.6rem;
+  background: var(--sd-ink);
+  color: var(--sd-white);
+}
+
+/* ---------- 4. Cabecera y navegación ---------- */
+.sd-header {
+  background: var(--sd-white);
+  border-bottom: 1px solid var(--sd-line);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.sd-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sd-font-title);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--sd-ink);
+  text-decoration: none;
+}
+.sd-brand:hover { color: var(--sd-ink); }
+.sd-brand img { width: 40px; height: auto; }
+.sd-brand span { color: var(--sd-blue); }
+
+.sd-header .nav-link {
+  font-family: var(--sd-font-title);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--sd-ink);
+  padding: 0.6rem 0.9rem;
+}
+.sd-header .nav-link:hover { color: var(--sd-blue); }
+.sd-header .nav-link.active,
+.sd-header .dropdown-item.active {
+  color: var(--sd-ink);
+  background: transparent;
+  box-shadow: inset 0 -4px 0 var(--sd-marker);   /* subrayado "marcador" */
+}
+.sd-header .dropdown-menu { border-radius: 0; border-color: var(--sd-line); }
+.sd-header .dropdown-item { font-family: var(--sd-font-title); font-size: 0.95rem; }
+
+/* Selector de idioma ES / EN (lo controla js/i18n.js) */
+.sd-lang {
+  display: inline-flex;
+  border: 2px solid var(--sd-ink);
+}
+.sd-lang-btn {
+  font-family: var(--sd-font-title);
+  font-weight: 700;
+  font-size: 0.8rem;
+  min-width: 44px;
+  min-height: 38px;            /* tamaño cómodo para tocar en el móvil */
+  padding: 0.3rem 0.65rem;
+  border: 0;
+  background: transparent;
+  color: var(--sd-ink);
+}
+.sd-lang-btn:hover { background: var(--sd-line); }
+.sd-lang-btn[aria-pressed="true"] { background: var(--sd-ink); color: var(--sd-white); }
+
+/* ---------- 5. Portada (hero) ---------- */
+.sd-hero { padding: 3rem 0 3.5rem; }
+.sd-hero .lead { font-size: 1.25rem; color: var(--sd-muted); }
+
+/* ---------- 6. Carrusel (lo mueve js/script.js) ---------- */
+.sd-carousel {
+  position: relative;
+  background: var(--sd-ink);
+  color: var(--sd-white);
+}
+.sd-slides {
+  position: relative;
+  height: clamp(390px, 54vw, 480px);
+}
+.sd-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+.sd-slide.is-active { opacity: 1; visibility: visible; }
+.sd-slide img {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.sd-slide figcaption { padding: 1rem 1.25rem 0.4rem; }
+.sd-slide-title {
+  font-family: var(--sd-font-title);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  margin: 0 0 0.25rem;
+}
+.sd-slide figcaption p { margin: 0 0 0.3rem; font-size: 1rem; color: #d6deec; }
+.sd-slide figcaption a { color: var(--sd-marker); font-family: var(--sd-font-title); font-size: 0.95rem; font-weight: 600; }
+.sd-slide figcaption a:hover { color: var(--sd-white); }
+
+.sd-controls {
+  display: flex;
+  flex-wrap: wrap;            /* en móvil los botones bajan de línea en vez de salirse */
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem 1rem;
+}
+.sd-ctrl {
+  font-family: var(--sd-font-title);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--sd-white);
+  border: 2px solid var(--sd-white);
+  padding: 0.3rem 0.8rem;
+  min-height: 40px;
+}
+.sd-ctrl:hover { background: var(--sd-white); color: var(--sd-ink); }
+.sd-carousel :focus-visible { outline-color: var(--sd-marker); }
+.sd-dots { display: flex; gap: 0.25rem; margin: 0 auto; order: 3; width: 100%; justify-content: center; }
+@media (min-width: 576px) {
+  .sd-dots { order: 0; width: auto; }   /* en pantallas mayores, los puntos van entre los botones */
+}
+.sd-dot {
+  width: 28px;
+  height: 40px;           /* área táctil cómoda */
+  padding: 0;
+  background: transparent;
+  border: 0;
+  position: relative;
+}
+.sd-dot::after {
+  content: "";
+  position: absolute;
+  left: 4px; right: 4px; top: 17px;
+  height: 6px;
+  background: #5d7090;
+}
+.sd-dot[aria-current="true"]::after { background: var(--sd-marker); }
+
+/* ---------- 7. Tarjetas de entradas ---------- */
+.sd-post {
+  background: var(--sd-white);
+  display: flex;
+  flex-direction: column;
+}
+.sd-post img { width: 100%; aspect-ratio: 8 / 5; object-fit: cover; }
+.sd-post-body { padding: 1.1rem 1.25rem 1.4rem; }
+.sd-post h3 { margin: 0.5rem 0; }
+.sd-post h3 a { color: var(--sd-ink); text-decoration: none; }
+.sd-post h3 a:hover { color: var(--sd-blue); text-decoration: underline; }
+.sd-meta { font-family: var(--sd-font-title); font-size: 0.82rem; color: var(--sd-muted); }
+
+@media (min-width: 768px) {
+  .sd-post--row { flex-direction: row; }
+  .sd-post--row img { width: 40%; aspect-ratio: auto; height: 100%; min-height: 200px; }
+  .sd-post--row .sd-post-body { width: 60%; }
+}
+
+/* ---------- 7b. Tarjetas interactivas (resaltar + detalles) ---------- */
+.sd-card {
+  background: var(--sd-white);
+  padding: 1.4rem 1.4rem 1.2rem;
+  height: 100%;
+  transition: opacity 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+.sd-card img { width: 100%; aspect-ratio: 8 / 5; object-fit: cover; margin-bottom: 1rem; }
+.sd-card h3 { margin-bottom: 0.4rem; }
+
+/* Cuando el grupo tiene una tarjeta resaltada, las demás se atenúan */
+.has-highlight .sd-card:not(.is-highlighted) { opacity: 0.6; }
+.sd-card.is-highlighted {
+  background: #fffbe0;
+  box-shadow: inset 0 -6px 0 var(--sd-blue);
+}
+
+.sd-more {
+  font-family: var(--sd-font-title);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--sd-blue);
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sd-more:hover { color: var(--sd-ink); }
+.sd-details { border-top: 1px solid var(--sd-line); margin-top: 0.6rem; padding-top: 0.8rem; font-size: 1rem; }
+.sd-details ul { padding-left: 1.1rem; margin-bottom: 0; }
+
+/* ---------- 8. Filtros ---------- */
+.sd-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.sd-filter {
+  font-family: var(--sd-font-title);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border: 2px solid var(--sd-ink);
+  background: transparent;
+  color: var(--sd-ink);
+}
+.sd-filter:hover { background: var(--sd-line); }
+.sd-filter.is-active { background: var(--sd-ink); color: var(--sd-white); }
+
+/* ---------- 9. Cabecera de páginas internas ---------- */
+.sd-pagehead { padding: 2.5rem 0 2rem; border-bottom: 1px solid var(--sd-line); background: var(--sd-white); }
+.sd-pagehead .lead { color: var(--sd-muted); font-size: 1.2rem; margin-bottom: 0; }
+.breadcrumb { font-family: var(--sd-font-title); font-size: 0.85rem; margin-bottom: 1rem; }
+.breadcrumb a { color: var(--sd-muted); }
+
+/* ---------- 10. Artículos ---------- */
+.sd-article h2 { margin-top: 2.2rem; }
+.sd-article p, .sd-article li { font-size: 1.15rem; line-height: 1.7; }
+.sd-article figure { margin: 1.5rem 0 2rem; }
+.sd-article figcaption { font-family: var(--sd-font-title); font-size: 0.82rem; color: var(--sd-muted); margin-top: 0.4rem; }
+.sd-checklist { background: var(--sd-white); padding: 1.2rem 1.5rem; border-left: 6px solid var(--sd-blue); }
+.sd-checklist h2 { margin-top: 0; font-size: 1.2rem; }
+
+/* Barra lateral (aside) */
+.sd-aside-box { background: var(--sd-white); padding: 1.3rem 1.4rem; margin-bottom: 1.5rem; }
+.sd-aside-box h2, .sd-aside-box h3 { font-size: 1.05rem; margin-bottom: 0.8rem; }
+.sd-aside-box ul { list-style: none; padding: 0; margin: 0; }
+.sd-aside-box li { padding: 0.35rem 0; border-bottom: 1px solid var(--sd-line); font-size: 1rem; }
+.sd-aside-box li:last-child { border-bottom: 0; }
+
+/* ---------- 11. Proceso (sí es una secuencia, por eso va numerado) ---------- */
+.sd-steps { list-style: none; counter-reset: paso; padding: 0; margin: 0; }
+.sd-steps li {
+  counter-increment: paso;
+  position: relative;
+  background: var(--sd-white);
+  padding: 1.2rem 1.4rem 1.2rem 4.6rem;
+  margin-bottom: 1rem;
+}
+.sd-steps li::before {
+  content: counter(paso);
+  position: absolute;
+  left: 1.2rem; top: 1.1rem;
+  width: 2.3rem; height: 2.3rem;
+  display: grid; place-items: center;
+  background: var(--sd-blue);
+  color: var(--sd-white);
+  font-family: var(--sd-font-title);
+  font-weight: 800;
+}
+.sd-steps h2 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+.sd-steps p { margin: 0; font-size: 1.02rem; }
+
+/* ---------- 12. Formularios ---------- */
+.sd-form label { font-family: var(--sd-font-title); font-weight: 600; font-size: 0.92rem; margin-bottom: 0.3rem; }
+.sd-form .form-control, .sd-form .form-select { border-radius: 0; border: 2px solid var(--sd-ink); font-family: var(--sd-font-body); font-size: 1.05rem; }
+.sd-form .form-control:focus, .sd-form .form-select:focus { border-color: var(--sd-blue); box-shadow: 0 0 0 3px rgba(11, 91, 230, 0.25); }
+.sd-form .invalid-feedback, .sd-form .valid-feedback { font-family: var(--sd-font-title); font-size: 0.85rem; }
+.sd-counter { font-family: var(--sd-font-title); font-size: 0.8rem; color: var(--sd-muted); text-align: right; }
+.sd-success { background: #e4f6e9; border-left: 6px solid #1a7f3c; padding: 0.9rem 1.1rem; font-family: var(--sd-font-title); font-size: 0.95rem; }
+
+/* ---------- 13. Franja de llamada a la acción y pie de página ---------- */
+.sd-cta { background: var(--sd-blue); color: var(--sd-white); padding: 3rem 0; }
+.sd-cta h2 { color: var(--sd-white); }
+.sd-cta p { color: #e3ecff; }
+
+.sd-footer { background: var(--sd-ink); color: #d6deec; padding: 3rem 0 1.5rem; font-size: 1rem; }
+.sd-footer h2 { font-size: 1rem; color: var(--sd-white); margin-bottom: 0.8rem; }
+.sd-footer a { color: #d6deec; text-decoration: none; }
+.sd-footer a:hover { color: var(--sd-marker); text-decoration: underline; }
+.sd-footer ul { list-style: none; padding: 0; margin: 0; }
+.sd-footer li { padding: 0.15rem 0; }
+.sd-footer :focus-visible { outline-color: var(--sd-marker); }
+.sd-footer .form-control { border-radius: 0; }
+.sd-footer .invalid-feedback { color: #ffb4b4; }
+.sd-footer .sd-success { background: #e4f6e9; color: var(--sd-ink); }
+.sd-copy { border-top: 1px solid #2d4266; margin-top: 2rem; padding-top: 1rem; font-size: 0.9rem; }
+
+/* ---------- 14. Utilidades ---------- */
+.sd-section { padding: 3rem 0; }
+.sd-section--white { background: var(--sd-white); }
+
+/* ---------- 15. Movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
