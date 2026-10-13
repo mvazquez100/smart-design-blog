@@ -1,0 +1,19 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+# Editor y herramientas
+.vscode/
+.idea/
+.qodo/
+# Secretos
+.env
+.env.*
+# Temporales
+node_modules/
+*.log
+*.tmp
+# Entregas y video
+*.7z
+*.zip
+*.mp4
