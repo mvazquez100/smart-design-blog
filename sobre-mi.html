@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- BUENAS PRÁCTICAS: UTF-8, idioma declarado, viewport para móviles, título y descripción únicos por página -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="sobre-mi-smart-design">Sobre mí | Smart Design</title>
+  <meta name="description" content="Conoce a la persona detrás de Smart Design y cómo trabaja." data-i18n-attr="content:conoce-a-la-persona-detras">
+  <meta name="theme-color" content="#12233d">
+  <link rel="icon" href="assets/images/logo-marca.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- 1) Bootstrap (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- 2) Estilos propios: van después de Bootstrap para poder personalizarlo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="sd-skip" href="#contenido" data-i18n="saltar-al-contenido">Saltar al contenido</a>
+<header class="sd-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Navegación principal" data-i18n-attr="aria-label:navegacion-principal">
+    <div class="container">
+      <a class="sd-brand" href="index.html"><img src="assets/images/logo-marca.png" width="40" height="42" alt=""><div data-i18n="smart-design">Smart <span>Design</span></div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú" data-i18n-attr="aria-label:abrir-o-cerrar-el-menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link" href="index.html" data-i18n="inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link active" href="sobre-mi.html" aria-current="page" data-i18n="sobre-mi">Sobre mí</a></li>
+<li class="nav-item"><a class="nav-link" href="servicios.html" data-i18n="servicios">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="portafolio.html" data-i18n="portafolio">Portafolio</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="blog">Blog</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="mas">Más</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="proceso.html" data-i18n="proceso">Proceso</a></li>
+<li><a class="dropdown-item" href="recursos.html" data-i18n="recursos">Recursos</a></li>
+<li><a class="dropdown-item" href="faq.html" data-i18n="preguntas-frecuentes">Preguntas frecuentes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="contacto.html" data-i18n="contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <!-- Selector de idioma: lo controla js/i18n.js -->
+            <div class="sd-lang" role="group" aria-label="Idioma / Language" data-i18n-skip>
+              <button type="button" class="sd-lang-btn" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
+              <button type="button" class="sd-lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="contenido">
+  <section class="sd-pagehead">
+    <div class="container">
+      <nav aria-label="Ruta de navegación" data-i18n-attr="aria-label:ruta-de-navegacion"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html" data-i18n="inicio">Inicio</a></li><li class="breadcrumb-item active" aria-current="page" data-i18n="sobre-mi">Sobre mí</li></ol></nav>
+      <h1 data-i18n="sobre-mi">Sobre mí</h1>
+      <p class="lead mt-3" data-i18n="quien-escribe-este-blog-y">Quién escribe este blog y por qué diseño.</p>
+    </div>
+  </section>
+  <section class="sd-section">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <article class="col-lg-8 sd-article">
+          <h2 class="mt-0" data-i18n="hola-soy-el-creador-de">Hola, soy el creador de Smart Design</h2>
+          <p data-i18n="soy-estudiante-universitario-y-empece">Soy estudiante universitario y empecé Smart Design para ayudar a negocios pequeños a verse claros en internet. Me enfoco en dos cosas: landing pages y logos.</p>
+          <p data-i18n="este-blog-nacio-como-parte">Este blog nació como parte de mi formación en desarrollo web. Lo uso para practicar lo que aprendo —HTML, CSS, Bootstrap y JavaScript— y para explicar mis decisiones de diseño con ejemplos sencillos.</p>
+          <h2 data-i18n="como-trabajo">Cómo trabajo</h2>
+          <ul>
+            <li data-i18n="primero-entiendo-que-quiere-lograr">Primero entiendo qué quiere lograr el negocio.</li>
+            <li data-i18n="diseno-para-el-celular-y">Diseño para el celular y luego amplío a pantallas grandes.</li>
+            <li data-i18n="prefiero-pocas-ideas-bien-ejecutadas">Prefiero pocas ideas bien ejecutadas a muchas a medias.</li>
+            <li data-i18n="escribo-lo-que-aprendo-incluso">Escribo lo que aprendo, incluso cuando algo no sale a la primera.</li>
+          </ul>
+          <h2 data-i18n="lo-que-me-importa">Lo que me importa</h2>
+          <p data-i18n="que-una-pagina-se-entienda">Que una página se entienda en cinco segundos, que cualquier persona pueda leerla y usarla, y que la marca se vea igual en una tarjeta, en redes y en la web.</p>
+          <p><a class="sd-btn" href="contacto.html" data-i18n="hablemos-de-tu-proyecto">Hablemos de tu proyecto</a></p>
+        </article>
+        <aside class="col-lg-4" aria-label="Datos de Smart Design" data-i18n-attr="aria-label:datos-de-smart-design">
+          <figure class="sd-aside-box sd-cut mb-4">
+            <img src="assets/images/autor.svg" width="800" height="500" alt="Ilustración de una persona dentro de un hexágono azul" loading="lazy" data-i18n-attr="alt:ilustracion-de-una-persona-dentro">
+            <figcaption class="sd-meta mt-2" data-i18n="ilustracion-original-para-smart-design">Ilustración original para Smart Design.</figcaption>
+          </figure>
+          <div class="sd-aside-box sd-cut">
+            <h2 data-i18n="smart-design-en-breve">Smart Design en breve</h2>
+            <ul><li data-i18n="landing-pages">Landing pages</li><li data-i18n="logos">Logos</li><li data-i18n="identidad-basica-de-marca">Identidad básica de marca</li></ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="sd-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 data-i18n="smart-design-2">Smart Design</h2>
+        <p data-i18n="landing-pages-y-logos-para">Landing pages y logos para negocios que están empezando. Este blog es mi cuaderno de diseño.</p>
+      </div>
+      <div class="col-6 col-lg-2"><h2 data-i18n="explora">Explora</h2><ul><li><a href="index.html" data-i18n="inicio">Inicio</a></li><li><a href="sobre-mi.html" data-i18n="sobre-mi">Sobre mí</a></li><li><a href="servicios.html" data-i18n="servicios">Servicios</a></li><li><a href="portafolio.html" data-i18n="portafolio">Portafolio</a></li><li><a href="blog.html" data-i18n="blog">Blog</a></li><li><a href="proceso.html" data-i18n="proceso">Proceso</a></li><li><a href="recursos.html" data-i18n="recursos">Recursos</a></li><li><a href="faq.html" data-i18n="preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="contacto.html" data-i18n="contacto">Contacto</a></li></ul></div>
+      <div class="col-6 col-lg-3"><h2 data-i18n="ultimas-entradas">Últimas entradas</h2><ul><li><a href="articulo-landing-pages.html" data-i18n="que-debe-tener-una-landing">Qué debe tener una landing page para convertir visitas en mensajes</a></li><li><a href="articulo-logos.html" data-i18n="cinco-pruebas-para-saber-si">Cinco pruebas para saber si un logo funciona</a></li><li><a href="articulo-color.html" data-i18n="como-elegir-una-paleta-de">Cómo elegir una paleta de color sin perderte entre mil opciones</a></li><li><a href="articulo-tipografia.html" data-i18n="dos-tipografias-bastan-como-combinarlas">Dos tipografías bastan: cómo combinarlas en una web</a></li></ul></div>
+      <div class="col-lg-3">
+        <h2 data-i18n="recibe-las-novedades">Recibe las novedades</h2>
+        <form class="sd-form" data-validate novalidate>
+          <label for="newsEmail" class="visually-hidden" data-i18n="correo-electronico">Correo electrónico</label>
+          <input type="email" class="form-control" id="newsEmail" name="email" placeholder="tu@correo.com" autocomplete="email" data-rule="email" aria-describedby="newsEmail-fb" data-i18n-attr="placeholder:tu-correo-com">
+          <div class="invalid-feedback" id="newsEmail-fb"></div>
+          <button type="submit" class="sd-btn sd-btn--marker mt-2" data-i18n="suscribirme">Suscribirme</button>
+          <p class="sd-success mt-2" role="status" data-form-success hidden data-i18n="correo-validado-es-una-demostracion">Correo validado. Es una demostración: no se envía a ningún servidor.</p>
+        </form>
+      </div>
+    </div>
+    <p class="sd-copy mb-0" data-i18n="2026-smart-design-proyecto-academico">&copy; <span data-year>2026</span> Smart Design. Proyecto académico de desarrollo web.</p>
+  </div>
+</footer>
+
+  <!-- Scripts al final del body para no bloquear la carga de la página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Orden importante: 1) diccionario  2) motor de idiomas  3) interacciones -->
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

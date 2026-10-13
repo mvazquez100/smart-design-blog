@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- BUENAS PRÁCTICAS: UTF-8, idioma declarado, viewport para móviles, título y descripción únicos por página -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="dos-tipografias-bastan-como-combinarlas-2">Dos tipografías bastan: cómo combinarlas en una web | Smart Design</title>
+  <meta name="description" content="Una para los títulos y otra para el texto. Reglas simples para que la página se lea con comodidad." data-i18n-attr="content:una-para-los-titulos-y">
+  <meta name="theme-color" content="#12233d">
+  <link rel="icon" href="assets/images/logo-marca.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- 1) Bootstrap (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- 2) Estilos propios: van después de Bootstrap para poder personalizarlo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="sd-skip" href="#contenido" data-i18n="saltar-al-contenido">Saltar al contenido</a>
+<header class="sd-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Navegación principal" data-i18n-attr="aria-label:navegacion-principal">
+    <div class="container">
+      <a class="sd-brand" href="index.html"><img src="assets/images/logo-marca.png" width="40" height="42" alt=""><div data-i18n="smart-design">Smart <span>Design</span></div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú" data-i18n-attr="aria-label:abrir-o-cerrar-el-menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link" href="index.html" data-i18n="inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="sobre-mi.html" data-i18n="sobre-mi">Sobre mí</a></li>
+<li class="nav-item"><a class="nav-link" href="servicios.html" data-i18n="servicios">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="portafolio.html" data-i18n="portafolio">Portafolio</a></li>
+<li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page" data-i18n="blog">Blog</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="mas">Más</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="proceso.html" data-i18n="proceso">Proceso</a></li>
+<li><a class="dropdown-item" href="recursos.html" data-i18n="recursos">Recursos</a></li>
+<li><a class="dropdown-item" href="faq.html" data-i18n="preguntas-frecuentes">Preguntas frecuentes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="contacto.html" data-i18n="contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <!-- Selector de idioma: lo controla js/i18n.js -->
+            <div class="sd-lang" role="group" aria-label="Idioma / Language" data-i18n-skip>
+              <button type="button" class="sd-lang-btn" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
+              <button type="button" class="sd-lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="contenido">
+  <section class="sd-pagehead">
+    <div class="container">
+      <nav aria-label="Ruta de navegación" data-i18n-attr="aria-label:ruta-de-navegacion"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html" data-i18n="inicio">Inicio</a></li><li class="breadcrumb-item"><a href="blog.html" data-i18n="blog">Blog</a></li><li class="breadcrumb-item active" aria-current="page" data-i18n="dos-tipografias-bastan-como-combinarlas">Dos tipografías bastan: cómo combinarlas en una web</li></ol></nav>
+      <h1 data-i18n="dos-tipografias-bastan-como-combinarlas">Dos tipografías bastan: cómo combinarlas en una web</h1>
+      <p class="lead mt-3" data-i18n="una-para-los-titulos-y">Una para los títulos y otra para el texto. Reglas simples para que la página se lea con comodidad.</p>
+    </div>
+  </section>
+  <section class="sd-section">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <article class="col-lg-8 sd-article">
+          <p class="sd-meta" data-i18n="tipografia-publicado-el-9-de"><span class="sd-tag">Tipografía</span> &nbsp; Publicado el <time datetime="2026-10-09">9 de octubre de 2026</time></p>
+          <figure>
+            <img class="sd-cut" src="assets/images/articulo-tipografia.svg" width="800" height="500" alt="Letras A grandes junto a una jerarquía de títulos y párrafos" data-i18n-attr="alt:letras-a-grandes-junto-a">
+            <figcaption data-i18n="ilustracion-original-para-smart-design">Ilustración original para Smart Design.</figcaption>
+          </figure>
+          
+<p data-i18n="no-necesitas-muchas-fuentes-para">No necesitas muchas fuentes para que una página se vea profesional. Con dos bien elegidas y un orden claro, el texto se lee mejor y la marca se reconoce.</p>
+<h2 data-i18n="una-para-titulos-otra-para">Una para títulos, otra para texto</h2>
+<p data-i18n="elijo-una-tipografia-con-personalidad">Elijo una tipografía con personalidad para los títulos y otra más neutra para los párrafos. Deben verse distintas: dos fuentes casi iguales parecen un error. En este blog uso Sora para los títulos y Newsreader para leer.</p>
+<h2 data-i18n="crea-una-jerarquia">Crea una jerarquía</h2>
+<p data-i18n="los-tamanos-comunican-el-orden">Los tamaños comunican el orden de importancia. Fijo una escala sencilla —por ejemplo, cada nivel un 25 % mayor que el anterior— y la repito en todas las páginas.</p>
+<h2 data-i18n="cuida-la-lectura">Cuida la lectura</h2>
+<ul>
+  <li data-i18n="interlineado-de-alrededor-de-1">Interlineado de alrededor de 1,5 veces el tamaño en los párrafos.</li>
+  <li data-i18n="lineas-de-entre-45-y">Líneas de entre 45 y 75 caracteres.</li>
+  <li data-i18n="pocos-pesos-distintos-normal-seminegrita">Pocos pesos distintos: normal, seminegrita y negrita bastan.</li>
+</ul>
+<h2 data-i18n="carga-las-fuentes-con-cuidado">Carga las fuentes con cuidado</h2>
+<p data-i18n="al-usar-google-fonts-conviene">Al usar Google Fonts conviene pedir solo los pesos que se usan, añadir <code>display=swap</code> y definir una fuente de respaldo para que el texto aparezca aunque la fuente tarde en cargar.</p>
+<div class="sd-checklist sd-cut">
+  <h2 data-i18n="resumen">Resumen</h2>
+  <p class="mb-0" data-i18n="dos-familias-una-escala-de">Dos familias, una escala de tamaños, buen interlineado y líneas de longitud cómoda.</p>
+</div>
+          <p class="mt-4"><a href="blog.html" data-i18n="volver-al-blog">&larr; Volver al blog</a></p>
+        </article>
+        <aside class="col-lg-4" aria-label="Más entradas" data-i18n-attr="aria-label:mas-entradas">
+          <div class="sd-aside-box sd-cut"><h2 data-i18n="otros-articulos">Otros artículos</h2><ul><li><a href="articulo-landing-pages.html" data-i18n="que-debe-tener-una-landing">Qué debe tener una landing page para convertir visitas en mensajes</a></li><li><a href="articulo-logos.html" data-i18n="cinco-pruebas-para-saber-si">Cinco pruebas para saber si un logo funciona</a></li><li><a href="articulo-color.html" data-i18n="como-elegir-una-paleta-de">Cómo elegir una paleta de color sin perderte entre mil opciones</a></li></ul></div>
+          <div class="sd-aside-box sd-cut"><h2 data-i18n="necesitas-ayuda">¿Necesitas ayuda?</h2><p class="mb-2" data-i18n="si-quieres-aplicar-esto-en">Si quieres aplicar esto en tu negocio, escríbeme.</p><a href="contacto.html" data-i18n="ir-a-contacto">Ir a contacto</a></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="sd-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 data-i18n="smart-design-2">Smart Design</h2>
+        <p data-i18n="landing-pages-y-logos-para">Landing pages y logos para negocios que están empezando. Este blog es mi cuaderno de diseño.</p>
+      </div>
+      <div class="col-6 col-lg-2"><h2 data-i18n="explora">Explora</h2><ul><li><a href="index.html" data-i18n="inicio">Inicio</a></li><li><a href="sobre-mi.html" data-i18n="sobre-mi">Sobre mí</a></li><li><a href="servicios.html" data-i18n="servicios">Servicios</a></li><li><a href="portafolio.html" data-i18n="portafolio">Portafolio</a></li><li><a href="blog.html" data-i18n="blog">Blog</a></li><li><a href="proceso.html" data-i18n="proceso">Proceso</a></li><li><a href="recursos.html" data-i18n="recursos">Recursos</a></li><li><a href="faq.html" data-i18n="preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="contacto.html" data-i18n="contacto">Contacto</a></li></ul></div>
+      <div class="col-6 col-lg-3"><h2 data-i18n="ultimas-entradas">Últimas entradas</h2><ul><li><a href="articulo-landing-pages.html" data-i18n="que-debe-tener-una-landing">Qué debe tener una landing page para convertir visitas en mensajes</a></li><li><a href="articulo-logos.html" data-i18n="cinco-pruebas-para-saber-si">Cinco pruebas para saber si un logo funciona</a></li><li><a href="articulo-color.html" data-i18n="como-elegir-una-paleta-de">Cómo elegir una paleta de color sin perderte entre mil opciones</a></li><li><a href="articulo-tipografia.html" data-i18n="dos-tipografias-bastan-como-combinarlas">Dos tipografías bastan: cómo combinarlas en una web</a></li></ul></div>
+      <div class="col-lg-3">
+        <h2 data-i18n="recibe-las-novedades">Recibe las novedades</h2>
+        <form class="sd-form" data-validate novalidate>
+          <label for="newsEmail" class="visually-hidden" data-i18n="correo-electronico">Correo electrónico</label>
+          <input type="email" class="form-control" id="newsEmail" name="email" placeholder="tu@correo.com" autocomplete="email" data-rule="email" aria-describedby="newsEmail-fb" data-i18n-attr="placeholder:tu-correo-com">
+          <div class="invalid-feedback" id="newsEmail-fb"></div>
+          <button type="submit" class="sd-btn sd-btn--marker mt-2" data-i18n="suscribirme">Suscribirme</button>
+          <p class="sd-success mt-2" role="status" data-form-success hidden data-i18n="correo-validado-es-una-demostracion">Correo validado. Es una demostración: no se envía a ningún servidor.</p>
+        </form>
+      </div>
+    </div>
+    <p class="sd-copy mb-0" data-i18n="2026-smart-design-proyecto-academico">&copy; <span data-year>2026</span> Smart Design. Proyecto académico de desarrollo web.</p>
+  </div>
+</footer>
+
+  <!-- Scripts al final del body para no bloquear la carga de la página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Orden importante: 1) diccionario  2) motor de idiomas  3) interacciones -->
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

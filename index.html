@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- BUENAS PRÁCTICAS: UTF-8, idioma declarado, viewport para móviles, título y descripción únicos por página -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="smart-design-blog-sobre-landing">Smart Design | Blog sobre landing pages y logos</title>
+  <meta name="description" content="Blog personal de Smart Design: artículos sobre landing pages, logos, color y tipografía para negocios que empiezan." data-i18n-attr="content:blog-personal-de-smart-design">
+  <meta name="theme-color" content="#12233d">
+  <link rel="icon" href="assets/images/logo-marca.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- 1) Bootstrap (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- 2) Estilos propios: van después de Bootstrap para poder personalizarlo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="sd-skip" href="#contenido" data-i18n="saltar-al-contenido">Saltar al contenido</a>
+<header class="sd-header">
+  <nav class="navbar navbar-expand-lg" aria-label="Navegación principal" data-i18n-attr="aria-label:navegacion-principal">
+    <div class="container">
+      <a class="sd-brand" href="index.html"><img src="assets/images/logo-marca.png" width="40" height="42" alt=""><div data-i18n="smart-design">Smart <span>Design</span></div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú" data-i18n-attr="aria-label:abrir-o-cerrar-el-menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page" data-i18n="inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="sobre-mi.html" data-i18n="sobre-mi">Sobre mí</a></li>
+<li class="nav-item"><a class="nav-link" href="servicios.html" data-i18n="servicios">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="portafolio.html" data-i18n="portafolio">Portafolio</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html" data-i18n="blog">Blog</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="mas">Más</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="proceso.html" data-i18n="proceso">Proceso</a></li>
+<li><a class="dropdown-item" href="recursos.html" data-i18n="recursos">Recursos</a></li>
+<li><a class="dropdown-item" href="faq.html" data-i18n="preguntas-frecuentes">Preguntas frecuentes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-lg-2"><a class="nav-link" href="contacto.html" data-i18n="contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3 my-2 my-lg-0">
+            <!-- Selector de idioma: lo controla js/i18n.js -->
+            <div class="sd-lang" role="group" aria-label="Idioma / Language" data-i18n-skip>
+              <button type="button" class="sd-lang-btn" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
+              <button type="button" class="sd-lang-btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="contenido">
+  <section class="sd-hero" aria-labelledby="hero-titulo">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5 align-items-center">
+        <div class="col-lg-5">
+          <span class="sd-pixels" aria-hidden="true"></span>
+          <h1 id="hero-titulo" data-i18n="diseno-claro-para-negocios-que">Diseño claro para negocios que apenas empiezan</h1>
+          <p class="lead mt-3" data-i18n="soy-estudiante-y-dirijo-smart">Soy estudiante y dirijo Smart Design. En este blog cuento cómo diseño landing pages y logos, y qué voy aprendiendo en cada proyecto.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a class="sd-btn" href="blog.html" data-i18n="leer-el-blog">Leer el blog</a>
+            <a class="sd-btn sd-btn--ghost" href="portafolio.html" data-i18n="ver-portafolio">Ver portafolio</a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <!-- Carrusel: lo controla js/script.js (módulo initCarousel) -->
+          <div class="sd-carousel sd-cut" data-carousel role="region" aria-roledescription="carrusel" aria-label="Temas destacados del blog" data-i18n-attr="aria-label:temas-destacados-del-blog;aria-roledescription:carrusel">
+            <div class="sd-slides" aria-live="off">
+          <figure class="sd-slide is-active" aria-roledescription="diapositiva" aria-label="1 de 4" data-i18n-attr="aria-label:1-de-4;aria-roledescription:diapositiva">
+            <img src="assets/images/slide-landing.svg" width="800" height="500" alt="Boceto de una landing page con titular, botón e imagen" data-i18n-attr="alt:boceto-de-una-landing-page">
+            <figcaption><p class="sd-slide-title" data-i18n="landing-pages-una-idea-por">Landing pages: una idea por pantalla</p><p data-i18n="que-debe-verse-sin-hacer">Qué debe verse sin hacer scroll y por qué un solo botón principal funciona mejor.</p><a href="articulo-landing-pages.html" data-i18n="leer-el-articulo">Leer el artículo</a></figcaption>
+          </figure>
+<figure class="sd-slide" aria-roledescription="diapositiva" aria-label="2 de 4" data-i18n-attr="aria-label:2-de-4;aria-roledescription:diapositiva">
+            <img src="assets/images/slide-logos.svg" width="800" height="500" alt="Un logo en fondo claro, oscuro y de color, además de varios tamaños" loading="lazy" data-i18n-attr="alt:un-logo-en-fondo-claro">
+            <figcaption><p class="sd-slide-title" data-i18n="logos-que-funcionan-en-grande">Logos que funcionan en grande y en pequeño</p><p data-i18n="cinco-pruebas-rapidas-antes-de">Cinco pruebas rápidas antes de aprobar cualquier logo.</p><a href="articulo-logos.html" data-i18n="leer-el-articulo">Leer el artículo</a></figcaption>
+          </figure>
+<figure class="sd-slide" aria-roledescription="diapositiva" aria-label="3 de 4" data-i18n-attr="aria-label:3-de-4;aria-roledescription:diapositiva">
+            <img src="assets/images/slide-color.svg" width="800" height="500" alt="Cinco bloques de color que forman una paleta" loading="lazy" data-i18n-attr="alt:cinco-bloques-de-color-que">
+            <figcaption><p class="sd-slide-title" data-i18n="paletas-con-proposito">Paletas con propósito</p><p data-i18n="un-color-principal-neutros-y">Un color principal, neutros y un acento: lo justo para una marca clara.</p><a href="articulo-color.html" data-i18n="leer-el-articulo">Leer el artículo</a></figcaption>
+          </figure>
+<figure class="sd-slide" aria-roledescription="diapositiva" aria-label="4 de 4" data-i18n-attr="aria-label:4-de-4;aria-roledescription:diapositiva">
+            <img src="assets/images/slide-tipografia.svg" width="800" height="500" alt="Letras A grandes y una jerarquía de textos" loading="lazy" data-i18n-attr="alt:letras-a-grandes-y-una">
+            <figcaption><p class="sd-slide-title" data-i18n="dos-tipografias-son-suficientes">Dos tipografías son suficientes</p><p data-i18n="como-combinar-una-fuente-para">Cómo combinar una fuente para títulos con otra para lectura.</p><a href="articulo-tipografia.html" data-i18n="leer-el-articulo">Leer el artículo</a></figcaption>
+          </figure>
+            </div>
+            <div class="sd-controls">
+              <button type="button" class="sd-ctrl" data-carousel-prev aria-label="Diapositiva anterior" data-i18n="anterior" data-i18n-attr="aria-label:diapositiva-anterior">Anterior</button>
+              <div class="sd-dots" data-carousel-dots></div>
+              <button type="button" class="sd-ctrl" data-carousel-toggle aria-pressed="false">Pausar</button>
+              <button type="button" class="sd-ctrl" data-carousel-next aria-label="Diapositiva siguiente" data-i18n="siguiente" data-i18n-attr="aria-label:diapositiva-siguiente">Siguiente</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sd-section sd-section--white">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <section class="col-lg-8" aria-labelledby="ultimas">
+          <h2 id="ultimas" class="mb-4" data-i18n="ultimas-entradas">Últimas entradas</h2>
+          <div class="d-grid gap-4">
+            <article class="sd-post sd-post--row sd-cut">
+  <img src="assets/images/articulo-tipografia.svg" width="800" height="500" alt="Letras A grandes junto a una jerarquía de títulos y párrafos" data-i18n-attr="alt:letras-a-grandes-junto-a">
+  <div class="sd-post-body">
+    <span class="sd-tag" data-i18n="tipografia">Tipografía</span>
+    <h3><a href="articulo-tipografia.html" data-i18n="dos-tipografias-bastan-como-combinarlas">Dos tipografías bastan: cómo combinarlas en una web</a></h3>
+    <p class="sd-meta mb-2"><time datetime="2026-10-09" data-i18n="9-de-octubre-de-2026">9 de octubre de 2026</time></p>
+    <p class="mb-0" data-i18n="una-para-los-titulos-y">Una para los títulos y otra para el texto. Reglas simples para que la página se lea con comodidad.</p>
+  </div>
+</article>
+            <article class="sd-post sd-post--row sd-cut">
+  <img src="assets/images/articulo-color.svg" width="800" height="500" alt="Cinco bloques de color: azul, azul marino, amarillo, azul claro y gris" loading="lazy" data-i18n-attr="alt:cinco-bloques-de-color-azul">
+  <div class="sd-post-body">
+    <span class="sd-tag" data-i18n="color">Color</span>
+    <h3><a href="articulo-color.html" data-i18n="como-elegir-una-paleta-de">Cómo elegir una paleta de color sin perderte entre mil opciones</a></h3>
+    <p class="sd-meta mb-2"><time datetime="2026-10-05" data-i18n="5-de-octubre-de-2026">5 de octubre de 2026</time></p>
+    <p class="mb-0" data-i18n="un-color-principal-algunos-neutros">Un color principal, algunos neutros y un acento. Así armo una paleta que se ve bien y se puede leer.</p>
+  </div>
+</article>
+            <article class="sd-post sd-post--row sd-cut">
+  <img src="assets/images/articulo-logos.svg" width="800" height="500" alt="Un logo hexagonal en tres versiones de color y en varios tamaños" loading="lazy" data-i18n-attr="alt:un-logo-hexagonal-en-tres">
+  <div class="sd-post-body">
+    <span class="sd-tag" data-i18n="logos">Logos</span>
+    <h3><a href="articulo-logos.html" data-i18n="cinco-pruebas-para-saber-si">Cinco pruebas para saber si un logo funciona</a></h3>
+    <p class="sd-meta mb-2"><time datetime="2026-09-28" data-i18n="28-de-septiembre-de-2026">28 de septiembre de 2026</time></p>
+    <p class="mb-0" data-i18n="un-logo-bonito-en-pantalla">Un logo bonito en pantalla grande puede fallar en un favicon. Con estas pruebas lo descubro a tiempo.</p>
+  </div>
+</article>
+          </div>
+          <p class="mt-4"><a href="blog.html" data-i18n="ver-todas-las-entradas">Ver todas las entradas</a></p>
+        </section>
+        <aside class="col-lg-4" aria-label="Información complementaria" data-i18n-attr="aria-label:informacion-complementaria">
+          <div class="sd-aside-box sd-cut">
+            <h2 data-i18n="sobre-este-blog">Sobre este blog</h2>
+            <p class="mb-2" data-i18n="es-el-cuaderno-de-smart">Es el cuaderno de Smart Design: ejemplos, errores y pruebas de diseño explicados en lenguaje sencillo.</p>
+            <a href="sobre-mi.html" data-i18n="conoce-quien-escribe">Conoce quién escribe</a>
+          </div>
+          <div class="sd-aside-box sd-cut">
+            <h2 data-i18n="categorias">Categorías</h2>
+            <ul>
+              <li><a href="blog.html#landing-pages" data-i18n="landing-pages">Landing pages</a></li>
+              <li><a href="blog.html#logos" data-i18n="logos">Logos</a></li>
+              <li><a href="blog.html#color" data-i18n="color">Color</a></li>
+              <li><a href="blog.html#tipografia" data-i18n="tipografia">Tipografía</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <section class="sd-section" aria-labelledby="que-hago">
+    <div class="container">
+      <h2 id="que-hago" class="mb-2" data-i18n="que-hago-en-smart-design">Qué hago en Smart Design</h2>
+      <p class="mb-4" data-i18n="pasa-el-mouse-sobre-cada">Pasa el mouse sobre cada servicio para resaltarlo y pulsa el botón para ver más.</p>
+      <div class="row g-4" data-card-group><div class="col-md-4"><article class="sd-card sd-cut" data-card>
+  
+  
+  <h3 data-i18n="landing-pages">Landing pages</h3>
+  <p data-i18n="una-pagina-con-un-objetivo">Una página con un objetivo claro: que te escriban, te reserven o te compren.</p>
+  <button type="button" class="sd-more" data-card-toggle aria-expanded="false" aria-controls="det-home-landing">Ver detalles</button>
+  <div class="sd-details" id="det-home-landing" hidden><ul><li data-i18n="estructura-pensada-para-movil-primero">Estructura pensada para móvil primero.</li><li data-i18n="texto-breve-y-boton-principal">Texto breve y botón principal visible.</li><li data-i18n="diseno-con-los-colores-de">Diseño con los colores de tu marca.</li></ul></div>
+</article></div><div class="col-md-4"><article class="sd-card sd-cut" data-card>
+  
+  
+  <h3 data-i18n="logos">Logos</h3>
+  <p data-i18n="un-simbolo-simple-que-se">Un símbolo simple que se reconoce en una tarjeta, en redes y en la pestaña del navegador.</p>
+  <button type="button" class="sd-more" data-card-toggle aria-expanded="false" aria-controls="det-home-logos">Ver detalles</button>
+  <div class="sd-details" id="det-home-logos" hidden><ul><li data-i18n="version-a-color-en-blanco">Versión a color, en blanco y negro y en fondo oscuro.</li><li data-i18n="pruebas-de-tamano-pequeno">Pruebas de tamaño pequeño.</li><li data-i18n="archivos-listos-para-usar">Archivos listos para usar.</li></ul></div>
+</article></div><div class="col-md-4"><article class="sd-card sd-cut" data-card>
+  
+  
+  <h3 data-i18n="identidad-basica">Identidad básica</h3>
+  <p data-i18n="paleta-de-color-y-dos">Paleta de color y dos tipografías para que todo lo que publiques se vea coherente.</p>
+  <button type="button" class="sd-more" data-card-toggle aria-expanded="false" aria-controls="det-home-identidad">Ver detalles</button>
+  <div class="sd-details" id="det-home-identidad" hidden><ul><li data-i18n="paleta-con-colores-principales-y">Paleta con colores principales y de apoyo.</li><li data-i18n="pareja-de-tipografias-con-tamanos">Pareja de tipografías con tamaños sugeridos.</li><li data-i18n="una-hoja-con-las-reglas">Una hoja con las reglas de uso.</li></ul></div>
+</article></div></div>
+      <p class="mt-4"><a href="servicios.html" data-i18n="ver-todos-los-servicios">Ver todos los servicios</a></p>
+    </div>
+  </section>
+
+  <section class="sd-cta" aria-labelledby="cta-titulo">
+    <div class="container">
+      <h2 id="cta-titulo" data-i18n="tienes-una-idea-de-negocio">¿Tienes una idea de negocio?</h2>
+      <p class="mb-4" data-i18n="cuentame-que-necesitas-y-vemos">Cuéntame qué necesitas y vemos si una landing page o un logo es lo que te conviene.</p>
+      <a class="sd-btn sd-btn--marker" href="contacto.html" data-i18n="escribeme">Escríbeme</a>
+    </div>
+  </section>
+</main>
+
+<footer class="sd-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 data-i18n="smart-design-2">Smart Design</h2>
+        <p data-i18n="landing-pages-y-logos-para">Landing pages y logos para negocios que están empezando. Este blog es mi cuaderno de diseño.</p>
+      </div>
+      <div class="col-6 col-lg-2"><h2 data-i18n="explora">Explora</h2><ul><li><a href="index.html" data-i18n="inicio">Inicio</a></li><li><a href="sobre-mi.html" data-i18n="sobre-mi">Sobre mí</a></li><li><a href="servicios.html" data-i18n="servicios">Servicios</a></li><li><a href="portafolio.html" data-i18n="portafolio">Portafolio</a></li><li><a href="blog.html" data-i18n="blog">Blog</a></li><li><a href="proceso.html" data-i18n="proceso">Proceso</a></li><li><a href="recursos.html" data-i18n="recursos">Recursos</a></li><li><a href="faq.html" data-i18n="preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="contacto.html" data-i18n="contacto">Contacto</a></li></ul></div>
+      <div class="col-6 col-lg-3"><h2 data-i18n="ultimas-entradas">Últimas entradas</h2><ul><li><a href="articulo-landing-pages.html" data-i18n="que-debe-tener-una-landing">Qué debe tener una landing page para convertir visitas en mensajes</a></li><li><a href="articulo-logos.html" data-i18n="cinco-pruebas-para-saber-si">Cinco pruebas para saber si un logo funciona</a></li><li><a href="articulo-color.html" data-i18n="como-elegir-una-paleta-de">Cómo elegir una paleta de color sin perderte entre mil opciones</a></li><li><a href="articulo-tipografia.html" data-i18n="dos-tipografias-bastan-como-combinarlas">Dos tipografías bastan: cómo combinarlas en una web</a></li></ul></div>
+      <div class="col-lg-3">
+        <h2 data-i18n="recibe-las-novedades">Recibe las novedades</h2>
+        <form class="sd-form" data-validate novalidate>
+          <label for="newsEmail" class="visually-hidden" data-i18n="correo-electronico">Correo electrónico</label>
+          <input type="email" class="form-control" id="newsEmail" name="email" placeholder="tu@correo.com" autocomplete="email" data-rule="email" aria-describedby="newsEmail-fb" data-i18n-attr="placeholder:tu-correo-com">
+          <div class="invalid-feedback" id="newsEmail-fb"></div>
+          <button type="submit" class="sd-btn sd-btn--marker mt-2" data-i18n="suscribirme">Suscribirme</button>
+          <p class="sd-success mt-2" role="status" data-form-success hidden data-i18n="correo-validado-es-una-demostracion">Correo validado. Es una demostración: no se envía a ningún servidor.</p>
+        </form>
+      </div>
+    </div>
+    <p class="sd-copy mb-0" data-i18n="2026-smart-design-proyecto-academico">&copy; <span data-year>2026</span> Smart Design. Proyecto académico de desarrollo web.</p>
+  </div>
+</footer>
+
+  <!-- Scripts al final del body para no bloquear la carga de la página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Orden importante: 1) diccionario  2) motor de idiomas  3) interacciones -->
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
